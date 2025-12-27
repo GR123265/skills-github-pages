@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>徽味天下 — 品味徽州千年 culinary heritage</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- 焦点图区域（全屏轮播） -->
+  <section class="banner-slider">
+    <div class="slides">
+      <div class="slide active">
+        <img src="images/banner1.jpg" alt="徽州臭鳜鱼">
+        <div class="slide-content">
+          <h2>舌尖上的安徽</h2>
+          <p>从黄山毛豆腐到淮南牛肉汤，从徽州臭鳜鱼到芜湖虾籽面<br>一道菜，一座城，一味乡愁。</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/banner2.jpg" alt="芜湖虾籽面">
+        <div class="slide-content">
+          <h2>百年烟火气</h2>
+          <p>一碗面，一口香，承载着皖南人的记忆与温情。</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/banner3.jpg" alt="黄山毛豆腐">
+        <div class="slide-content">
+          <h2>徽菜之魂</h2>
+          <p>发酵的智慧，油煎的酥脆，入口即化的绵软。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 指示点 -->
+    <div class="dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+
+    <!-- 左右箭头 -->
+    <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+    <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+  </section>
+  <!-- 导航栏（固定在顶部） -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="dishes/index.html">十大名菜</a></li>
+      <li><a href="snacks/index.html">地方小吃</a></li>
+      <li><a href="culture/index.html">徽菜文化</a></li>
+      <li><a href="about/index.html">联系我们</a></li>
+    </ul>
+  </nav>
+    <!-- 十大名菜 -->
+    <section class="featured-dishes">
+      <h2 class="section-title"><i class="fas fa-crown"></i> 安徽十大名菜</h2>
+      <div class="dish-grid">
+        <div class="dish-card">
+          <h3>徽州臭鳜鱼</h3>
+          <p>闻着臭，吃着香，肉质鲜嫩如蒜瓣。</p>
+          <a href="dishes/stinky_fish.html" class="btn">查看详情</a>
+        </div>
+        <div class="dish-card">
+          <h3>毛豆腐</h3>
+          <p>表面长满白毛，油煎后外焦里嫩。</p>
+          <a href="dishes/maodoufu.html" class="btn">查看详情</a>
+        </div>
+        <div class="dish-card">
+          <h3>胡适一品锅</h3>
+          <p>多层叠放，慢炖数小时，寓意团圆丰盛。</p>
+          <a href="dishes/yipin_guo.html" class="btn">查看详情</a>
+        </div>
+        <div class="dish-card">
+          <h3>无为板鸭</h3>
+          <p>百年熏香，咸香入味，越嚼越香。</p>
+          <a href="dishes/wuwei_duck.html" class="btn">查看详情</a>
+        </div>
+        <div class="dish-card">
+          <h3>符离集烧鸡</h3>
+          <p>中国四大名鸡之一，骨酥肉烂。</p>
+          <a href="dishes/fuliji_chicken.html" class="btn">查看详情</a>
+        </div>
+        <div class="dish-card">
+          <h3>李鸿章大杂烩</h3>
+          <p>海参鱿鱼火腿鸡肉一锅炖，百味融合。</p>
+          <a href="dishes/li_hongzhang_stew.html" class="btn">查看详情</a>
+        </div>
+        <div class="dish-card">
+          <h3>八公山豆腐</h3>
+          <p>西汉刘安发明，细嫩如脂，豆香浓郁。</p>
+          <a href="dishes/bagongshan_tofu.html" class="btn">查看详情</a>
+        </div>
+        <div class="dish-card">
+          <h3>问政山笋</h3>
+          <p>唐代贡笋，清甜脆嫩，春日第一鲜。</p>
+          <a href="dishes/wenzheng_bamboo.html" class="btn">查看详情</a>
+        </div>
+        <div class="dish-card">
+          <h3>刀板香</h3>
+          <p>徽州腊肉，置于樟木板上切片，香而不腻。</p>
+          <a href="dishes/daobanxiang.html" class="btn">查看详情</a>
+        </div>
+        <div class="dish-card">
+          <h3>黄山炖鸽</h3>
+          <p>野鸽慢炖，汤色清亮，滋补养生。</p>
+          <a href="dishes/huangshan_pigeon.html" class="btn">查看详情</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="snacks-section">
+  <h2><i class="fas fa-bread-slice"></i> 地道小吃</h2>
+  <div class="snacks-container">
+    <ul class="snacks-list">
+      <li>阜阳格拉条 — 粗韧爽滑，辣香浓郁</li>
+      <li>芜湖虾籽面 — 面劲道，汤鲜美，虾籽香</li>
+      <li>合肥鸭油烧饼 — 外酥内软，咸香诱人</li>
+      <li>安庆炒米 — 香脆可口，老少皆宜</li>
+      <li>蚌埠馓子 — 金黄酥脆，传统年货</li>
+    </ul>
+    <ul class="snacks-list">
+      <li>宿州雪糕 — 手工冰激凌，童年回忆</li>
+      <li>滁州琅琊酥糖 — 花生芝麻，香甜不腻</li>
+      <li>马鞍山采石矶茶干 — 咸香有嚼劲，下酒佳品</li>
+      <li>池州九华素斋 — 素而不寡，禅意悠然</li>
+      <li>宣城绩溪挞馃 — 糯米皮包馅，乡土风味</li>
+    </ul>
+  </div>
+</section>
+
+  <!-- 页脚 -->
+  <footer>
+  <div class="footer-content">
+    <p><strong>作者：</strong>高瑞</p>
+    <p><strong>邮箱：</strong><a href="mailto:2456317479@qq.com">2456317479@qq.com</a></p>
+    <p><strong>地址：</strong>广东省清远市广东建设职业技术学院</p>
+  </div>
+</footer>
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      let currentIndex = 0;
+
+      // 自动轮播
+      function autoSlide() {
+        setInterval(() => {
+          nextSlide();
+        }, 5000);
+      }
+
+      // 切换到下一张
+      function nextSlide() {
+        slides[currentIndex].classList.remove('active');
+        dots[currentIndex].classList.remove('active');
+
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add('active');
+        dots[currentIndex].classList.add('active');
+      }
+
+      // 切换到上一张
+      function prevSlide() {
+        slides[currentIndex].classList.remove('active');
+        dots[currentIndex].classList.remove('active');
+
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        slides[currentIndex].classList.add('active');
+        dots[currentIndex].classList.add('active');
+      }
+
+      // 点击指示点切换
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const index = dot.dataset.index;
+          slides.forEach(slide => slide.classList.remove('active'));
+          dots.forEach(d => d.classList.remove('active'));
+          slides[index].classList.add('active');
+          dots[index].classList.add('active');
+          currentIndex = index;
+        });
+      });
+
+      // 点击左右按钮
+      document.querySelector('.next-btn').addEventListener('click', nextSlide);
+      document.querySelector('.prev-btn').addEventListener('click', prevSlide);
+
+      // 初始化
+      autoSlide();
+    });
+  </script>
+
+</body>
+</html>
