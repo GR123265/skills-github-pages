@@ -1,0 +1,559 @@
+/* ===== 全局重置与变量 ===== */
+:root {
+  --primary-red: #c62828;
+  --dark-red: #b71c1c;
+  --gold: #FFD700;
+  --light-bg: #fffaf0;
+  --text-dark: #333;
+  --text-light: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== 头部 ===== */
+.top-header {
+  background: linear-gradient(to right, var(--primary-red), var(--dark-red));
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo h1 {
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.logo p {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* ===== 导航栏 ===== */
+.navbar {
+  background: #2e2e2e;
+  padding: 12px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+  color: white;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.7);
+}
+
+/* ===== Hero 区域 ===== */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+              url('https://cdn.pixabay.com/photo/2020/07/21/14/20/fish-5424343_1280.jpg') no-repeat center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+  border-radius: 12px;
+  margin: 30px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* ===== 内容区块标题 ===== */
+.section-title {
+  color: var(--primary-red);
+  text-align: center;
+  margin: 50px 0 30px;
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: var(--gold);
+}
+
+/* ===== 名菜卡片网格 ===== */
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.dish-card, .snack-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dish-card:hover, .snack-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dish-card h3, .snack-card h3 {
+  color: var(--primary-red);
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.dish-card p, .snack-card p {
+  margin-bottom: 15px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary-red);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--dark-red);
+}
+
+/* ===== 小吃列表 ===== */
+.snacks-list {
+  list-style: none;
+  padding-left: 25px;
+  margin: 0;
+}
+
+.snacks-list li {
+  margin: 12px 0;
+  color: var(--text-dark);
+  font-size: 1.05rem;
+  position: relative;
+}
+
+.snacks-list li::before {
+  content: '•';
+  color: var(--primary-red);
+  position: absolute;
+  left: 0;
+  font-size: 1.4rem;
+  top: -2px;
+}
+
+/* ===== 文化页 & 联系页 ===== */
+.page-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin: 30px 0;
+}
+
+.page-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.page-content blockquote {
+  font-style: italic;
+  color: var(--primary-red);
+  margin: 20px 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--gold);
+}
+
+/* ===== 联系表单 ===== */
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: var(--primary-red);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: var(--dark-red);
+}
+/* ===== 地道小吃区块 ===== */
+.snacks-section {
+  margin: 40px 0;
+}
+
+.snacks-section h2 {
+  color: #c62828;
+  text-align: center;
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.snacks-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: #FFD700;
+}
+
+.snacks-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.snacks-list {
+  list-style: none;
+  padding-left: 0;
+  flex: 1;
+}
+
+.snacks-list li {
+  margin: 12px 0;
+  color: #333;
+  font-size: 1.05rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.snacks-list li::before {
+  content: '•';
+  color: #c62828;
+  position: absolute;
+  left: 0;
+  font-size: 1.4rem;
+  top: -2px;
+}
+/* ===== 焦点图 ===== */
+.banner-slider {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.slide {
+  flex: 1;
+  position: relative;
+  opacity: 0;
+  display: none;
+}
+
+.slide.active {
+  opacity: 1;
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 700px;
+  backdrop-filter: blur(5px);
+}
+
+.slide-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #FFD700;
+}
+
+.slide-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dot.active {
+  background: #FFD700;
+}
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+.logo-container {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.logo-link {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.logo-link:hover {
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+  transform: scale(1.02);
+}
+
+.logo-link p {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #FFD700;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .banner-slider {
+    height: 400px;
+  }
+  .slide-content h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ===== 页脚 ===== */
+footer {
+  background: #1a1a1a;
+  color: var(--gold);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.95rem;
+  margin-top: 50px;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+  .logo h1 { font-size: 1.8rem; }
+  .hero-content h2 { font-size: 2.2rem; }
+  .hero-content p { font-size: 1rem; }
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* =============== 联系我们页面专用样式 =============== */
+
+.contact-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 20px 0 40px;
+}
+
+.contact-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+}
+
+.contact-card h3 {
+  color: #c62828;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.contact-details li {
+  margin: 12px 0;
+  list-style: none;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.contact-details i {
+  width: 24px;
+  text-align: center;
+  color: #FFD700;
+  margin-right: 8px;
+}
+
+.contact-details a {
+  color: #1a237e;
+  text-decoration: underline;
+}
+
+.contact-details a:hover {
+  color: #c62828;
+}
+
+.qrcode-placeholder {
+  text-align: center;
+  margin: 15px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+}
+
+.anhui-badge {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.anhui-badge span {
+  background: #c62828;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+}
